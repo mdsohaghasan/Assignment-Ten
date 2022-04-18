@@ -9,7 +9,7 @@ function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [error, setError] = useState('');
+  const [error, setError] = useState('');
 
   const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
 
@@ -26,10 +26,10 @@ function Register() {
 
   const handleCreateUser = event => {
     event.preventDefault();
-    // if(password.length <6){
-    //   setError('password must be 6  charecters');
-    //   return;
-    // }
+    if(password.length <6){
+      setError('password must be 6  charecters');
+      return;
+    }
     createUserWithEmailAndPassword(email,password);
   }
 
