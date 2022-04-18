@@ -10,6 +10,7 @@ import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Checkout from './Components/Checkout/Checkout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './Components/NotFound/NotFound';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
 
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

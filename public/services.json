@@ -3,42 +3,48 @@
         "package": "Classic Photo & Video",
         "price": 0.4,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     },
     
     {
-        "name": "Expressions Photo & Video",
-        "ratting": 0.3,
+        "package": "Expressions Photo & Video",
+        "price": 0.3,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     },
     
     {
-        "name": "Exclusive Photo & Video",
-        "ratting": 0.5,
+        "package": "Exclusive Photo & Video",
+        "price": 0.5,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     },
     
     {
-        "name": "Storytelling Photo & Video",
-        "ratting": 0.2,
+        "package": "Storytelling Photo & Video",
+        "price": 0.2,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     },
     
     {
-        "name": "cupple photoshoot & Video",
-        "ratting": 0.1,
+        "package": "cupple photoshoot & Video",
+        "price": 0.1,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     },
     
     {
-        "name": "family photoshoot",
-        "ratting": 0.4,
+        "package": "family photoshoot",
+        "price": 0.4,
         "Pic": 241,
-        "feedback": "user feedback"
+        "description": "user feedback",
+        "ratting": "0.3"
     }
     
 ]
