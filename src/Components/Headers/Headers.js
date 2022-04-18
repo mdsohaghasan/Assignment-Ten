@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav, Navbar, NavDropdown , } from 'react-bootstrap';
+// import './logo.jpg'
 
 
 function Headers() {
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
     signOut(auth);
+    
   }
   return (
-
+<div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
    <Link to="/" class="navbar-brand">Navbar</Link>
@@ -47,6 +47,10 @@ function Headers() {
     </div>
   </div>
 </nav>
+
+
+</div>
+
 
   )
 }
