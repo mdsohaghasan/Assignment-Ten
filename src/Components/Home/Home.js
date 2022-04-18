@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Services from '../Services/Services'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
 
         <div>
           <h2>service</h2>
+          <Services></Services>
           <Link to="/Checkout">Checkout Now</Link>
         </div>
     </div>

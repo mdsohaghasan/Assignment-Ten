@@ -4,11 +4,11 @@ import Headers from './Components/Headers/Headers';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Signin from './Components/Signin/Signin';
-import Services from './Components/Services/Services';
 import Blogs from './Components/Blogs/Blogs';
 import About from './Components/About/About';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Checkout from './Components/Checkout/Checkout';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
