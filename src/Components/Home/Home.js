@@ -1,8 +1,8 @@
 import React from 'react'
-import Services from '../Services/Services'
 import slide1 from '../../img/slide/1.jpg'
 import slide2 from '../../img/slide/2.jpg'
 import slide3 from '../../img/slide/3.jpg'
+import Services from '../Services/Services';
 
 
 function Home() {
@@ -37,6 +37,7 @@ function Home() {
 
         <div>
           <Services></Services>
+          
         </div>
     </div>
   )

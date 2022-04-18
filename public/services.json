@@ -1,41 +1,41 @@
 [
     {
-        "name": "jhonson",
-        "ratting": 0.4,
+        "package": "Classic Photo & Video",
+        "price": 0.4,
         "Pic": 241,
         "feedback": "user feedback"
     },
     
     {
-        "name": "peacker",
+        "name": "Expressions Photo & Video",
         "ratting": 0.3,
         "Pic": 241,
         "feedback": "user feedback"
     },
     
     {
-        "name": "kim",
+        "name": "Exclusive Photo & Video",
         "ratting": 0.5,
         "Pic": 241,
         "feedback": "user feedback"
     },
     
     {
-        "name": "herry",
+        "name": "Storytelling Photo & Video",
         "ratting": 0.2,
         "Pic": 241,
         "feedback": "user feedback"
     },
     
     {
-        "name": "mishell",
+        "name": "cupple photoshoot & Video",
         "ratting": 0.1,
         "Pic": 241,
         "feedback": "user feedback"
     },
     
     {
-        "name": "jhonson",
+        "name": "family photoshoot",
         "ratting": 0.4,
         "Pic": 241,
         "feedback": "user feedback"
