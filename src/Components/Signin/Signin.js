@@ -8,7 +8,7 @@ function Signin() {
   return (
     <div>
       <h2>SignIn Now</h2>
-      <button onClick={signInWithGoogle} >Google Singin</button>
+      <button onClick={signInWithGoogle} className="googleBtn">Google Singin</button>
       <div>
         <input type="email" placeholder='your email' /> <br />
         <input type="password" placeholder='your password' /> <br />
