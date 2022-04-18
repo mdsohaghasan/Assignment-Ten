@@ -9,6 +9,7 @@ import About from './Components/About/About';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Checkout from './Components/Checkout/Checkout';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NotFound from './Components/NotFound/NotFound';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <RequireAuth><Checkout></Checkout></RequireAuth>}></Route>
         {/* <Route path="/Services" element={
         <RequireAuth><Services></Services></RequireAuth>}></Route> */}
-        
+        <Route path="/*" element={<NotFound />} />
 
       </Routes>
     </div>

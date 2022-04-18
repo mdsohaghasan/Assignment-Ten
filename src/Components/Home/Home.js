@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Services from '../Services/Services'
 import slide1 from '../../img/slide/1.jpg'
 import slide2 from '../../img/slide/2.jpg'
@@ -37,9 +36,7 @@ function Home() {
 </div>
 
         <div>
-          <h2>service</h2>
           <Services></Services>
-          <Link to="/Checkout">Checkout Now</Link>
         </div>
     </div>
   )

@@ -29,7 +29,6 @@ function Checkout() {
     <div>
         <div>Checkout</div>
         <div>
-            <h3>Service</h3>
             <Services></Services>
         </div>
         <div>Checkout info</div>
