@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 // import useFirebase from '../Hooks/useFirebase';
@@ -16,7 +16,8 @@ function Signin() {
   const from = location.state?.from?.pathname || '/'
 
   const [signInWithEmailAndPassword,user,error,] = useSignInWithEmailAndPassword(auth);
-
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [signInWithFacebook,] = useSignInWithFacebook(auth);
   if(user){
     navigate(from, {replace:true});
   }
@@ -38,9 +39,9 @@ function Signin() {
   return (
     <div>
       <h2>SignIn Now</h2>
-      <button 
-      // onClick={signInWithGoogle}
-       className="googleBtn">Google Singin</button>
+      <button onClick={() => signInWithGoogle ()} className="Btn">Google Singin</button>
+      <button onClick={() => signInWithFacebook ()} className="Btn">Facebook Singin</button>
+
       <form onSubmit={handleSignInUser}>
         <input onBlur={handleEmailBlur} type="email" placeholder='your email' required /> <br />
         <input onBlur={handlePasswordBlur} type="password" placeholder='your password' required /> <br />
