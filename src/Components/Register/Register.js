@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -11,7 +11,13 @@ function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+
+  const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+
+  if(user){
+    navigate('/home');
+  }
 
   const handleNameBlur = event => {
     setName(event.target.value);

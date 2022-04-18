@@ -1,21 +1,37 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 // import useFirebase from '../Hooks/useFirebase';
 import './Signin.css';
 
 function Signin() {
   // const { signInWithGoogle } = useFirebase();
 
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   // const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/'
 
-  // const handleEmailBlur = event => {
-  //   setEmail(event.target.value);
-  // }
-  // const handlePasswordBlur = event => {
-  //   setPassword(event.target.value);
-  // }
+  const [signInWithEmailAndPassword,user,error,] = useSignInWithEmailAndPassword(auth);
+
+  if(user){
+    navigate(from, {replace:true});
+  }
+
+  const handleEmailBlur = event => {
+    setEmail(event.target.value);
+  }
+  const handlePasswordBlur = event => {
+    setPassword(event.target.value);
+  }
+  const handleSignInUser = event => {
+    event.preventDefault();
+    
+    signInWithEmailAndPassword(email,password);
+  }
 
   
 
@@ -25,9 +41,10 @@ function Signin() {
       <button 
       // onClick={signInWithGoogle}
        className="googleBtn">Google Singin</button>
-      <form>
-        <input type="email" placeholder='your email' required /> <br />
-        <input type="password" placeholder='your password' required /> <br />
+      <form onSubmit={handleSignInUser}>
+        <input onBlur={handleEmailBlur} type="email" placeholder='your email' required /> <br />
+        <input onBlur={handlePasswordBlur} type="password" placeholder='your password' required /> <br />
+        <p>{error?.message}</p>
         <input type="submit" value="Submit" />
       </form>
       <p>new to user <Link to="/Register">Register Now</Link></p>
